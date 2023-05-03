@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UserInformationCanvas : MonoBehaviour
@@ -52,18 +50,18 @@ public class UserInformationCanvas : MonoBehaviour
     {
         //유저가 정보를 입력할 경우 DataManager에 현재 플레이어를 저장하는 클래스 
         //PlayerData 의 새로운 객체 nowPlayer를 만든 후, 저장합니다.
-        if (DataManager.Instance.playerScoreDataDict.ContainsKey(playerInputField.text)|| playerInputField.text==string.Empty)
+        if (DataManager.Instance.playerScoreDataDict.ContainsKey(playerInputField.text) || playerInputField.text == string.Empty)
         {
             StartCoroutine(nameof(warningtext_co));
         }
         else
         {
             DataManager.Instance.addData(playerInputField.text, initScore);
-          
+
             //TODO 게임씬 로딩 
             SceneManager.LoadScene("Game");
         }
-       
+
     }
 
     IEnumerator warningtext_co()
