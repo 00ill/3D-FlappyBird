@@ -26,4 +26,5 @@ ex) public final int SPECIAL_NUMBER = 1;
 
 for문이나 if문 아래 코드 한 줄이여도 중괄호 무조건 사용
 
-빌드할 때 Project Settings - Player - Resolution and Presentation - Allowed Orientation for Auto Rotaion - Portrait만 체크
+빌드할 때
+Project Settings - Player - Resolution and Presentation - Allowed Orientation for Auto Rotaion - Portrait만 체크
