@@ -5,17 +5,17 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField]
-    private GameObject poolingObject;
-    [SerializeField]
     private int count = 15;
     private Queue<GameObject> poolingQueue;
+    [SerializeField] private GameObject[] tubeArr = new GameObject[3];
 
     private void Awake()
     {
         poolingQueue = new Queue<GameObject>();
         for (int i = 0; i < count; i++)
         {
-            GameObject obj = Instantiate(poolingObject, transform.position, Quaternion.identity, transform);
+            int randNum = Random.Range(0, tubeArr.Length);
+            GameObject obj = Instantiate(tubeArr[randNum], transform.position, tubeArr[randNum].transform.rotation, transform);
             poolingQueue.Enqueue(obj);
             obj.SetActive(false);
         }
@@ -30,7 +30,8 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            GameObject obj = Instantiate(poolingObject, transform.position, Quaternion.identity, transform);
+            int randNum = Random.Range(0, tubeArr.Length);
+            GameObject obj = Instantiate(tubeArr[randNum], transform.position, tubeArr[randNum].transform.rotation, transform);
             obj.SetActive(true);
             return obj;
         }
