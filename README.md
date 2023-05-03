@@ -6,6 +6,8 @@ Edit - Project Settings - Editor - Force Text
 
 Edit - Project Settings - Version Control - Visible Meta Files
 
+Bulid Setting에서 Android로 Switch
+
 파일탐색기에서 파일을 옮기는 경우 메타파일이 재생성되서 참조가 사라집니다.
 프로젝트 뷰에서만 파일을 수정해주세요.
 
@@ -27,4 +29,7 @@ ex) public final int SPECIAL_NUMBER = 1;
 for문이나 if문 아래 코드 한 줄이여도 중괄호 무조건 사용
 
 빌드할 때
+
 Project Settings - Player - Resolution and Presentation - Allowed Orientation for Auto Rotaion - Portrait만 체크
+
+
