@@ -4,12 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle
   - Score
-  - TubePool
-  - BackGroundPool
   - Tube
   - Ground
+  - Obstacle
   layers:
   - Default
   - TransparentFX
